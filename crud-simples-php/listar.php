@@ -10,7 +10,21 @@ include_once 'conexao.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRUD | Listagem de Usuários</title>
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" /> -->
+    <!-- Font Awesome -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	rel="stylesheet"
+	/>
+	<!-- Google Fonts -->
+	<link
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+	rel="stylesheet"
+	/>
+	<!-- MDB -->
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css"
+	rel="stylesheet"
+	/>
 
 </head>
 
@@ -20,7 +34,7 @@ include_once 'conexao.php';
     <a href="listar.php">Listar</a><br>
     <h1>Listar Usuários</h1>
 
-<?php
+    <?php
 
     if (isset($_SESSION['msg'])) {
         echo $_SESSION['msg'];
@@ -76,7 +90,11 @@ echo "<a href='listar.php?pagina=$qunatidade_pg'>Proxima</a>";
 ?>
 
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script> -->
+    <!-- MDB -->
+	<script
+	type="text/javascript"
+	src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"
+	></script>
 
 </body>
 

@@ -89,12 +89,21 @@ include_once 'conexao.php';
     </nav>
     <!-- Navbar -->
 
+    <?php
+        if (isset($_SESSION['msg'])) {
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
+?>
+
 <?php
 
+// Receber o número da página
 $pagina_atual = filter_input(INPUT_GET, 'pagina', FILTER_SANITIZE_NUMBER_INT);
 
 $pagina = (!empty($pagina_atual)) ? $pagina_atual : 1;
 
+// Quantidade de resultados por página
 $qnt_result_pag = 2;
 
 // Calcular o inicio da visualização
@@ -111,7 +120,10 @@ while ($row_usuario = mysqli_fetch_assoc($resultado_usuarios)) {
     echo '<div class="fw-bold">'.$row_usuario['full_name'].'</div>';
     echo '<div class="text-muted">'.$row_usuario['email'].'</div>';
     echo '</div>';
-    echo '<span class="badge rounded-pill badge-success">Active</span>';
+    echo '<div>';
+    echo "<a type='button' href='editar.php?id=".$row_usuario['id']."' class='btn btn-success me-2'>Editar</a>";
+    echo '<a type="button" class="btn btn-danger">Delete</a>';
+    echo '</div>';
     echo '</li><hr>';
     echo '</ul>';
     echo '</div>';
@@ -127,6 +139,7 @@ $row_pg = mysqli_fetch_assoc($resultado_pg);
 $qunatidade_pg = ceil($row_pg['num_result'] / $qnt_result_pag);
 
 // Limitar quantidades de links anterior e proximo
+// Primeiro ( 1 2 ) 3 ( 4 5 ) Último
 $max_links = 2;
 echo '<nav aria-label="...">';
 echo '<ul class="pagination">';
@@ -147,6 +160,7 @@ for ($pag_dep = $pagina + 1; $pag_dep <= $pagina + $max_links; ++$pag_dep) {
         echo "<a class='page-link' href='tabela.php?pagina=$pag_dep'>$pag_dep</a>";
     }
 }
+
 echo '<li class="page-item">';
 echo "<a class='page-link' href='tabela.php?pagina=$qunatidade_pg'>Última</a>";
 echo '</li>';

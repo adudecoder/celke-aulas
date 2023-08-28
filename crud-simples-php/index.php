@@ -68,6 +68,9 @@ session_start();
 					<button type="button" class="btn btn-link px-3 me-2">
 						<a href="Views/tabela.php">Listagem</a>
 					</button>
+					<button type="button" class="btn btn-link px-3 me-2">
+						<a href="Views/pesquisar.php">Pesquisar</a>
+					</button>
 					<button type="button" class="btn btn-primary me-3">
 						<a href="index.php"></a>
 						Cadastrar

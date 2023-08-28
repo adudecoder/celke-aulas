@@ -122,7 +122,7 @@ while ($row_usuario = mysqli_fetch_assoc($resultado_usuarios)) {
     echo '</div>';
     echo '<div>';
     echo "<a type='button' href='editar.php?id=".$row_usuario['id']."' class='btn btn-success me-2'>Editar</a>";
-    echo '<a type="button" class="btn btn-danger">Delete</a>';
+    echo "<a type='button' href='proc_apagar_usuario.php?id=".$row_usuario['id']."' class='btn btn-danger'>Delete</a>";
     echo '</div>';
     echo '</li><hr>';
     echo '</ul>';

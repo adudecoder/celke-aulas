@@ -37,7 +37,7 @@ include_once 'conexao.php';
         <!-- Navbar brand -->
         <a class="navbar-brand me-2" href="https://mdbgo.com/">
         <img
-            src="https://picsum.photos/1000/500/?blur"
+            src="https://www.php.net//images/logos/new-php-logo.svg"
             height="16"
             alt="MDB Logo"
             loading="lazy"
@@ -63,24 +63,24 @@ include_once 'conexao.php';
         <!-- Left links -->
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-            <a class="nav-link" href="#">Listagem de Usuários</a>
+            <a class="nav-link fw-bold" href="#">Listagem de Usuários</a>
             </li>
         </ul>
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-            <button type="button" class="btn btn-link px-3 me-2">
+            <!-- <button type="button" class="btn btn-link px-3 me-2">
                 <a href="index.php">Cadastrar</a>
-            </button>
-            <button type="button" class="btn btn-primary me-3">
-            Sign up for free
-            </button>
-            <a
+            </button> -->
+            <a href="index.php" type="button" class="btn btn-primary me-3">
+                Cadastrar
+            </a>
+            <!-- <a
             class="btn btn-dark px-3"
             href="https://github.com/mdbootstrap/mdb-ui-kit"
             role="button"
             ><i class="fab fa-github"></i
-            ></a>
+            ></a> -->
         </div>
         </div>
         <!-- Collapsible wrapper -->

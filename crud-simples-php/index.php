@@ -6,7 +6,7 @@ session_start();
 
 <head>
     <meta charset="utf-8">
-    <title>CRUD - Cadastrar</title>
+    <title>CRUD - Cadastrar Usuário</title>
 	<!-- Font Awesome -->
 	<link
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -33,7 +33,7 @@ session_start();
 			<!-- Navbar brand -->
 			<a class="navbar-brand me-2" href="https://mdbgo.com/">
 			<img
-				src="https://picsum.photos/1000/500/?blur"
+				src="https://www.php.net//images/logos/new-php-logo.svg"
 				height="16"
 				alt="MDB Logo"
 				loading="lazy"
@@ -59,7 +59,7 @@ session_start();
 				<!-- Left links -->
 				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 					<li class="nav-item">
-					<a class="nav-link" href="#">MDB Blog</a>
+					<a class="nav-link fw-bold" href="#">CRUD PHP + Material Bootstrap</a>
 					</li>
 				</ul>
 				<!-- Left links -->
@@ -69,14 +69,9 @@ session_start();
 						<a href="tabela.php">Listagem</a>
 					</button>
 					<button type="button" class="btn btn-primary me-3">
-						Cadastre-se Grátis
+						<a href="index.php"></a>
+						Cadastrar
 					</button>
-					<a
-					class="btn btn-dark px-3"
-					href="https://github.com/mdbootstrap/mdb-ui-kit"
-					role="button"
-					><i class="fab fa-github"></i
-					></a>
 				</div>
 			</div>
 			<!-- Collapsible wrapper -->
@@ -84,8 +79,6 @@ session_start();
 	<!-- Container wrapper -->
 	</nav>
 	<!-- Navbar -->
-
-    <!-- <h1>Cadastrar Usuário</h1> -->
 
     <?php
         if (isset($_SESSION['msg'])) {
@@ -107,6 +100,13 @@ session_start();
     <!-- Pills content -->
     <div class="tab-content p-5 m-5">
         <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
+
+		<div class="text-center">
+			<div class="card-body">
+				<h1 class="card-title">Cadastrar Usuário</h1>
+			</div>
+		</div>
+
             <form class="pt-5" method="POST" action="processa.php">
                 <!-- <div class="text-center mb-3">
                     <p>Entrar com:</p>
@@ -145,24 +145,23 @@ session_start();
                 <div class="row mb-4">
                     <div class="col-md-6 d-flex justify-content-center">
                         <!-- Checkbox -->
-                        <div class="form-check mb-3 mb-md-0">
+                        <!-- <div class="form-check mb-3 mb-md-0">
                             <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
                             <label class="form-check-label" for="loginCheck"> Lembra-me </label>
-                        </div>
+                        </div> -->
                     </div>
 
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <!-- Simple link -->
+                    <!-- <div class="col-md-6 d-flex justify-content-center">
                         <a href="#!">Esqueceu a senha?</a>
-                    </div>
+                    </div> -->
                 </div>
 
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-block mb-4">Entrar</button>
+                <button type="submit" class="btn btn-primary btn-block mb-4">Cadastrar</button>
 
                 <!-- Register buttons -->
                 <div class="text-center">
-                    <p>Não tem uma conta? <a href="#!">Cadastre-se</a></p>
+                    <p>Já tem uma conta? <a href="#!">Entrar</a></p>
                 </div>
             </form>
         </div>

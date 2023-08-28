@@ -66,7 +66,7 @@ session_start();
 
 				<div class="d-flex align-items-center">
 					<button type="button" class="btn btn-link px-3 me-2">
-						<a href="tabela.php">Listagem</a>
+						<a href="Views/tabela.php">Listagem</a>
 					</button>
 					<button type="button" class="btn btn-primary me-3">
 						<a href="index.php"></a>
@@ -87,16 +87,6 @@ session_start();
         }
 ?>
 
-    <!-- <form method="POST" action="processa.php">
-        <label>Nome: </label>
-        <input type="text" name="full-name" placeholder="Digite o nome completo"><br><br>
-
-        <label>E-mail: </label>
-        <input type="email" name="email" placeholder="Digite o seu melhor e-mail"><br><br>
-
-        <input type="submit" value="Cadastrar">
-    </form> -->
-
     <!-- Pills content -->
     <div class="tab-content p-5 m-5">
         <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="tab-login">
@@ -107,27 +97,7 @@ session_start();
 			</div>
 		</div>
 
-            <form class="pt-5" method="POST" action="processa.php">
-                <!-- <div class="text-center mb-3">
-                    <p>Entrar com:</p>
-                    <button type="button" class="btn btn-secondary btn-floating mx-1">
-                        <i class="fab fa-facebook-f"></i>
-                    </button>
-
-                    <button type="button" class="btn btn-secondary btn-floating mx-1">
-                        <i class="fab fa-google"></i>
-                    </button>
-
-                    <button type="button" class="btn btn-secondary btn-floating mx-1">
-                        <i class="fab fa-twitter"></i>
-                    </button>
-
-                    <button type="button" class="btn btn-secondary btn-floating mx-1">
-                        <i class="fab fa-github"></i>
-                    </button>
-                </div>
-
-                <p class="text-center">ou:</p> -->
+            <form class="pt-5" method="POST" action="./Controllers/processa.php">
 
                 <!-- Name input -->
                 <div class="form-outline mb-4">
@@ -139,21 +109,6 @@ session_start();
                 <div class="form-outline mb-4">
                     <input type="email" name="email" id="loginEmail" class="form-control" />
                     <label class="form-label" for="loginEmail">Email</label>
-                </div>
-
-                <!-- 2 column grid layout -->
-                <div class="row mb-4">
-                    <div class="col-md-6 d-flex justify-content-center">
-                        <!-- Checkbox -->
-                        <!-- <div class="form-check mb-3 mb-md-0">
-                            <input class="form-check-input" type="checkbox" value="" id="loginCheck" checked />
-                            <label class="form-check-label" for="loginCheck"> Lembra-me </label>
-                        </div> -->
-                    </div>
-
-                    <!-- <div class="col-md-6 d-flex justify-content-center">
-                        <a href="#!">Esqueceu a senha?</a>
-                    </div> -->
                 </div>
 
                 <!-- Submit button -->

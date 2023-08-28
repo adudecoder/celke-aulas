@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'conexao.php';
+include_once '../Models/conexao.php';
 ?>
 
 <!DOCTYPE html>
@@ -69,18 +69,9 @@ include_once 'conexao.php';
         <!-- Left links -->
 
         <div class="d-flex align-items-center">
-            <!-- <button type="button" class="btn btn-link px-3 me-2">
-                <a href="index.php">Cadastrar</a>
-            </button> -->
-            <a href="index.php" type="button" class="btn btn-primary me-3">
+            <a href="../index.php" type="button" class="btn btn-primary me-3">
                 Cadastrar
             </a>
-            <!-- <a
-            class="btn btn-dark px-3"
-            href="https://github.com/mdbootstrap/mdb-ui-kit"
-            role="button"
-            ><i class="fab fa-github"></i
-            ></a> -->
         </div>
         </div>
         <!-- Collapsible wrapper -->
@@ -121,8 +112,8 @@ while ($row_usuario = mysqli_fetch_assoc($resultado_usuarios)) {
     echo '<div class="text-muted">'.$row_usuario['email'].'</div>';
     echo '</div>';
     echo '<div>';
-    echo "<a type='button' href='editar.php?id=".$row_usuario['id']."' class='btn btn-success me-2'>Editar</a>";
-    echo "<a type='button' href='proc_apagar_usuario.php?id=".$row_usuario['id']."' class='btn btn-danger'>Delete</a>";
+    echo "<a type='button' href='../Views/editar.php?id=".$row_usuario['id']."' class='btn btn-success me-2'>Editar</a>";
+    echo "<a type='button' href='../Controllers/proc_apagar_usuario.php?id=".$row_usuario['id']."' class='btn btn-danger'>Delete</a>";
     echo '</div>';
     echo '</li><hr>';
     echo '</ul>';
@@ -144,12 +135,12 @@ $max_links = 2;
 echo '<nav aria-label="...">';
 echo '<ul class="pagination">';
 echo '<li class="page-item">';
-echo "<a class='page-link' href='tabela.php?pagina=1'>Primeira</a>";
+echo "<a class='page-link' href='../Views/tabela.php?pagina=1'>Primeira</a>";
 echo '</li>';
 
 for ($pag_ant = $pagina - $max_links; $pag_ant <= $pagina - 1; ++$pag_ant) {
     if ($pag_ant >= 1) {
-        echo "<a class='page-link' href='tabela.php?pagina=$pag_ant'>$pag_ant</a>";
+        echo "<a class='page-link' href='../Views/tabela.php?pagina=$pag_ant'>$pag_ant</a>";
     }
 }
 
@@ -157,12 +148,12 @@ echo "$pagina";
 
 for ($pag_dep = $pagina + 1; $pag_dep <= $pagina + $max_links; ++$pag_dep) {
     if ($pag_dep <= $qunatidade_pg) {
-        echo "<a class='page-link' href='tabela.php?pagina=$pag_dep'>$pag_dep</a>";
+        echo "<a class='page-link' href='../Views/tabela.php?pagina=$pag_dep'>$pag_dep</a>";
     }
 }
 
 echo '<li class="page-item">';
-echo "<a class='page-link' href='tabela.php?pagina=$qunatidade_pg'>Última</a>";
+echo "<a class='page-link' href='../Views/tabela.php?pagina=$qunatidade_pg'>Última</a>";
 echo '</li>';
 echo '</ul>';
 echo '</nav>';

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once 'conexao.php';
+include_once '../Models/conexao.php';
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 $result_usuario = "SELECT * FROM users WHERE id = '$id'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
@@ -30,8 +30,6 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 </head>
 
 <body>
-    <!-- <a href="cad_usuario.php">Cadastrar</a><br>
-    <a href="index.php">Listar</a><br> -->
 	<!-- Navbar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
 	<!-- Container wrapper -->
@@ -71,18 +69,9 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 				<!-- Left links -->
 
 				<div class="d-flex align-items-center">
-					<!-- <button type="button" class="btn btn-link px-3 me-2">
-						<a href="tabela.php">Listagem</a>
-					</button> -->
-					<a href="tabela.php" type="button" class="btn btn-danger me-3">
+					<a href="../Views/tabela.php" type="button" class="btn btn-danger me-3">
 						Cancelar
 					</a>
-					<!-- <a
-					class="btn btn-dark px-3"
-					href="https://github.com/mdbootstrap/mdb-ui-kit"
-					role="button"
-					><i class="fab fa-github"></i
-					></a> -->
 				</div>
 			</div>
 			<!-- Collapsible wrapper -->
@@ -96,19 +85,6 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
             unset($_SESSION['msg']);
         }
 ?>
-    <!-- <form method="POST" action="proc_edit_usuario.php">
-        <input type="hidden" name="id" value="<?php echo $row_usuario['id']; ?>">
-
-        <label>Nome: </label>
-        <input type="text" name="full-name" placeholder="Digite o nome completo"
-            value="<?php echo $row_usuario['full_name']; ?>"><br><br>
-
-        <label>E-mail: </label>
-        <input type="email" name="email" placeholder="Digite o seu melhor e-mail"
-            value="<?php echo $row_usuario['email']; ?>"><br><br>
-
-        <input type="submit" value="Editar">
-    </form> -->
 
     <form method="POST" action="proc_edit_usuario.php" class="m-5">
 		<input type="hidden" id="form1Example1" name="id" class="form-control" value="<?php echo $row_usuario['id']; ?>" />

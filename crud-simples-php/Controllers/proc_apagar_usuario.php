@@ -18,7 +18,7 @@ if (!empty($id)) {
             </div>
         </div>
         ";
-        header('Location: Views/tabela.php');
+        header('Location: ../Views/tabela.php');
     } else {
         $_SESSION['msg'] = "
         <div class='alert alert-danger d-flex align-items-center' role='alert'>
@@ -28,7 +28,7 @@ if (!empty($id)) {
             </div>
         </div>
         ";
-        header("Location: Views/tabela.php?id=$id");
+        header("Location: ../Views/tabela.php?id=$id");
     }
 } else {
     $_SESSION['msg'] = "
@@ -39,5 +39,5 @@ if (!empty($id)) {
             </div>
         </div>
         ";
-    header("Location: Views/tabela.php?id=$id");
+    header("Location: ../Views/tabela.php?id=$id");
 }

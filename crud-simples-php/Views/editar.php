@@ -86,7 +86,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
         }
 ?>
 
-    <form method="POST" action="proc_edit_usuario.php" class="m-5">
+    <form method="POST" action="../Controllers/proc_edit_usuario.php" class="m-5">
 		<input type="hidden" id="form1Example1" name="id" class="form-control" value="<?php echo $row_usuario['id']; ?>" />
 
         <!-- Name input -->

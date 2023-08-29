@@ -19,7 +19,7 @@ if (mysqli_affected_rows($conn)) {
         </div>
     </div>
     ";
-    header('Location: Views/tabela.php');
+    header('Location: ../Views/tabela.php');
 } else {
     $_SESSION['msg'] = "
         <div class='alert alert-primary d-flex align-items-center' role='alert'>
@@ -29,5 +29,5 @@ if (mysqli_affected_rows($conn)) {
             </div>
         </div>
         ";
-    header("Location: Views/editar.php?id=$id");
+    header("Location: ../Views/tabela.php?id=$id");
 }
